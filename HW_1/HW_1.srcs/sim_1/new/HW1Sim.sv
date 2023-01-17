@@ -19,6 +19,8 @@ module HW1Sim(
         progClk = 0;
         prog_addr = 32'b0;
         instruct = 32'b0;
+        progClk = 1;
+        #1 progClk = 0;
         forever begin
             #4 progClk = ~progClk;
             prog_addr = prog_addr + 32'b100;
