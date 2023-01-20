@@ -17,10 +17,12 @@
 
 
 module add4adder(
-        input[31:0] operand,    // input to the +4 adder
-        output[31:0] added_out  // whatever the input was + 4
+        input[31:0] operand,             // input to the +4 adder
+        output logic[31:0]  added_out    // whatever the input was + 4
     );
     
+    // just always add 4 combinationally to input
+    assign added_out = operand + 32'b100; 
     
     
 endmodule

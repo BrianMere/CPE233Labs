@@ -36,7 +36,8 @@ module program_counter(
             PC_COUNT <= PC_DIN;
         end
         
-        // Normal Operation: Just maintain the certain input value given by the MUX
+        // Normal Operation: Just maintain the certain input value given by the 
+        // MUX
         
     end
     
