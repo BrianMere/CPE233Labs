@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jan 23 17:27:57 2023
+# Process ID: 33720
+# Current directory: /home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.runs/synth_1
+# Command line: vivado -log REG_FILE.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source REG_FILE.tcl
+# Log file: /home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.runs/synth_1/REG_FILE.vds
+# Journal file: /home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.runs/synth_1/vivado.jou
+# Running On: brian-desktopPC, OS: Linux, CPU Frequency: 4300.852 MHz, CPU Physical cores: 6, Host memory: 33576 MB
+#-----------------------------------------------------------
+source REG_FILE.tcl -notrace
