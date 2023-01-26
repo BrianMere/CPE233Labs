@@ -30,14 +30,42 @@ module RF_sim(
         CLK = 0;
 
         // begin test cases
+        
+        // currently all read values should be 0's
 
-        #1 tick_clk(); // test to see if the initial state is all 0's
+        test_case(0,0,0,0,0); // 0
         #1 tick_clk();
 
+        test_case(0,13,13,'h255,0);
+        #1 tick_clk();
+
+        test_case(31,2,7,'h31, 1); //2 
+        #1 tick_clk();
+
+        test_case(31,2,7,'h31, 1);
+        #1 tick_clk();
+
+        test_case(7,2,2,'hFFFFFFFF, 1); //4
+        #1 tick_clk();
+
+        test_case(7,2,2,'hFFFFFFFF, 1);
+        #1 tick_clk();
+
+        test_case(0,2,0,'hFFFFFAFF, 1); // 6
+        #1 tick_clk();
+
+        test_case(0,2,0,'hFFFFFAFF, 1);
+        #1 tick_clk();
+
+        test_case(2,0,2,'h123, 0); // 8
+        #1 tick_clk();
+
+        test_case(4,2,2,'h124, 1);
+        #1 tick_clk();
 
     end
 
-    function test_case(int adr1, int adr2, int wd, int wa, int en);
+    function test_case(int adr1, int adr2, int wa, int wd, int en);
         RF_ADR1 = adr1;
         RF_ADR2 = adr2;
         RF_WD = wd;

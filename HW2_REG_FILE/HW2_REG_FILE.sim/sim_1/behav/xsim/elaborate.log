@@ -1,0 +1,34 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/brianm/Applications/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot RF_sim_behav xil_defaultlib.RF_sim xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3597] non-void function 'test_case' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:36]
+WARNING: [VRFC 10-3597] non-void function 'tick_clk' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:37]
+WARNING: [VRFC 10-3597] non-void function 'test_case' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:39]
+WARNING: [VRFC 10-3597] non-void function 'tick_clk' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:40]
+WARNING: [VRFC 10-3597] non-void function 'test_case' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:42]
+WARNING: [VRFC 10-3597] non-void function 'tick_clk' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:43]
+WARNING: [VRFC 10-3597] non-void function 'test_case' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:45]
+WARNING: [VRFC 10-3597] non-void function 'tick_clk' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:46]
+WARNING: [VRFC 10-3597] non-void function 'test_case' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:48]
+WARNING: [VRFC 10-3597] non-void function 'tick_clk' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:49]
+WARNING: [VRFC 10-3597] non-void function 'test_case' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:51]
+WARNING: [VRFC 10-3597] non-void function 'tick_clk' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:52]
+WARNING: [VRFC 10-3597] non-void function 'test_case' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:54]
+WARNING: [VRFC 10-3597] non-void function 'tick_clk' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:55]
+WARNING: [VRFC 10-3597] non-void function 'test_case' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:57]
+WARNING: [VRFC 10-3597] non-void function 'tick_clk' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:58]
+WARNING: [VRFC 10-3597] non-void function 'test_case' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:60]
+WARNING: [VRFC 10-3597] non-void function 'tick_clk' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:61]
+WARNING: [VRFC 10-3597] non-void function 'test_case' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:63]
+WARNING: [VRFC 10-3597] non-void function 'tick_clk' called as a task without void casting [/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.REG_FILE
+Compiling module xil_defaultlib.RF_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot RF_sim_behav

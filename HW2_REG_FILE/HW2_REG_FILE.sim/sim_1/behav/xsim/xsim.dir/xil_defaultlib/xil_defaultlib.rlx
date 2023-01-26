@@ -1,0 +1,7 @@
+0.7
+2020.2
+Apr 18 2022
+15:53:03
+/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,uvm,,,,,,
+/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv,1674709777,systemVerilog,,,,RF_sim,,uvm,,,,,,
+/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv,1674524180,systemVerilog,,/home/brianm/Documents/Repos/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sim_1/new/RF_sim.sv,,REG_FILE,,uvm,,,,,,
