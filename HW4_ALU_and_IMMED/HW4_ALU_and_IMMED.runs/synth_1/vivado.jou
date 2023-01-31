@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jan 30 17:47:37 2023
+# Process ID: 29351
+# Current directory: /home/brianm/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.runs/synth_1
+# Command line: vivado -log ALU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU.tcl
+# Log file: /home/brianm/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.runs/synth_1/ALU.vds
+# Journal file: /home/brianm/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.runs/synth_1/vivado.jou
+# Running On: brian-desktopPC, OS: Linux, CPU Frequency: 4301.415 MHz, CPU Physical cores: 6, Host memory: 33576 MB
+#-----------------------------------------------------------
+source ALU.tcl -notrace
