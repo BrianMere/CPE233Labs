@@ -20,17 +20,22 @@ module IMMED_GEN(
     output logic [31:0] U_TYPE,
     output logic [31:0] I_TYPE,
     output logic [31:0] S_TYPE,
-    output logic [31:0] J_TYPE,
+    output logic [31:0] J_TYPE, 
     output logic [31:0] B_TYPE
     );
 
     // USE COMBINATIONAL!
     always_comb begin
-        U_TYPE = INSTRUCT[31:12]; // Will shift the bits 12 places left after these operations.
-        // I_TYPE = INSTRUCT[]
-        // S_TYPE = 
-        // J_TYPE = 
-        // B_TYPE = 
+        // Will shift the bits 12 places left after these operations.
+        U_TYPE = {INSTRUCT[31:12], 12'b0};
+        // need to sign extend the immediate for the operation. Copy the left bit 20 times.
+        I_TYPE = {{20{INSTRUCT[31]}}, INSTRUCT[31:20]}; 
+        // sext(imm), but now the imm is in multiple parts
+        S_TYPE = {{20{INSTRUCT[31]}}, INSTRUCT[31:25], INSTRUCT[11:7]};
+        // sext(imm << 1), really only used for jal
+        J_TYPE = {{12{INSTRUCT[31]}}, INSTRUCT[19:12], INSTRUCT[20], INSTRUCT[30:21], 1'b0};
+        // sext(imm << 1)
+        B_TYPE = {{20{INSTRUCT[31]}}, INSTRUCT[7], INSTRUCT[30:25], INSTRUCT[11:8], 1'b0};
     end
 
 endmodule

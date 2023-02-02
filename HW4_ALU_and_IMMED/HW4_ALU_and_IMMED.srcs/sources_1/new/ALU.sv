@@ -49,7 +49,7 @@ module ALU(
             4'b0010: result = (srcA < srcB) ? 1 : 0; // slt: set to if less than, else 0. SV default to unsigned
             4'b0011: result = ($signed(srcA) < $signed(srcB)) ? 1 : 0; //sltu: same as above but w/ unsigned values
             4'b1001: result = srcA << 12; // lui-copy: lui will load all but the lower 12 bits, which then are handled by addi.
-            default: result = 8'hFFFFFFFF; // This usually won't occur, but fail hard for now during testing.
+            default: result = 32'hFFFFFFFF; // This usually won't occur, but fail hard for now during testing.
         endcase
     end
 
