@@ -45,11 +45,15 @@ module ALU(
             4'b0100: result = srcA ^ srcB;  // XOR
             4'b0101: result = srcA >> srcB; // Logical Shift Right (SRL)
             4'b0001: result = srcA << srcB; // Logical Shift Left (SLL)
-            4'b1101: result = srcA >>> srcB; // Arithmatic Shift Right (SRA)
-            4'b0010: result = (srcA < srcB) ? 1 : 0; // slt: set to if less than, else 0. SV default to unsigned
-            4'b0011: result = ($signed(srcA) < $signed(srcB)) ? 1 : 0; //sltu: same as above but w/ unsigned values
-            4'b1001: result = srcA << 12; // lui-copy: lui will load all but the lower 12 bits, which then are handled by addi.
-            default: result = 32'hFFFFFFFF; // This usually won't occur, but fail hard for now during testing.
+            4'b1101: result = $signed(srcA) >>> srcB; // Arithmatic Shift Right (SRA)
+            4'b0010: result = ($signed(srcA) < $signed(srcB)); 
+            // slt: set to if less than, else 0. SV default to signed
+            4'b0011: result = (srcA < srcB); 
+            //sltu: same as above but w/ unsigned values
+            4'b1001: result = srcA; 
+            // lui-copy: lui will load all but the lower 12 bits, which then are handled by addi.
+            default: result = 32'hFFFFFFFF; 
+            // This usually won't occur, but fail hard for now during testing.
         endcase
     end
 
