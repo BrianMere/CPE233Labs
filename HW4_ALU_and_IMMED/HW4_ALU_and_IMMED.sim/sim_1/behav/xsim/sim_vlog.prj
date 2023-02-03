@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
-"../../../../HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv" \
+"../../../../HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv" \
 "../../../../HW4_ALU_and_IMMED.srcs/sim_1/new/sim.sv" \
 
 # compile glbl module

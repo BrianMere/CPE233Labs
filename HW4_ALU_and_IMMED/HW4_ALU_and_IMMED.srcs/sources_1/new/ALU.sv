@@ -43,9 +43,9 @@ module ALU(
             4'b0110: result = srcA | srcB;  // OR
             4'b0111: result = srcA & srcB;  // AND
             4'b0100: result = srcA ^ srcB;  // XOR
-            4'b0101: result = srcA >> srcB; // Logical Shift Right (SRL)
-            4'b0001: result = srcA << srcB; // Logical Shift Left (SLL)
-            4'b1101: result = $signed(srcA) >>> srcB; // Arithmatic Shift Right (SRA)
+            4'b0101: result = srcA >> srcB[4:0]; // Logical Shift Right (SRL). ONLY USE 5 LSBs!
+            4'b0001: result = srcA << srcB[4:0]; // Logical Shift Left (SLL)
+            4'b1101: result = $signed(srcA) >>> srcB[4:0]; // Arithmatic Shift Right (SRA)
             4'b0010: result = ($signed(srcA) < $signed(srcB)); 
             // slt: set to if less than, else 0. SV default to signed
             4'b0011: result = (srcA < srcB); 
