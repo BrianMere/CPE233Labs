@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv" \
+"../../../../HW5_MEM_BRANCH_GENS.srcs/sim_1/new/sim.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
