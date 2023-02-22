@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Feb 22 11:12:15 2023
+# Process ID: 11168
+# Current directory: C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13792 C:\Users\brian\Documents\SchoolPapers\Repositories\CPE233Labs\HW6_Control_Unit\HW6_Control_Unit.xpr
+# Log file: C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/vivado.log
+# Journal file: C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit\vivado.jou
+# Running On: DESKTOP-OJK9U19, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16799 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+source sim.tcl
+close_sim
+launch_simulation
+source sim.tcl
+current_wave_config {Untitled 2}
+add_wave {{/sim/MCU/PCMUX}} 
+current_wave_config {Untitled 2}
+add_wave {{/sim/MCU/PROG_COUNT/PC_COUNT}} 
+close_sim
+launch_simulation
+source sim.tcl
+close_sim
+launch_simulation
+source sim.tcl
+current_wave_config {Untitled 4}
+add_wave {{/sim/MCU/PROG_COUNT}} 
+close_sim
+launch_simulation
+source sim.tcl
+close_sim
+launch_simulation
+source sim.tcl
+current_wave_config {Untitled 6}
+add_wave {{/sim/MCU/PROG_COUNT/PC_COUNT}} 
+restart
+run all
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+current_wave_config {Untitled 6}
+add_wave {{/sim/MCU/State_Machine/CLK}} 
+current_wave_config {Untitled 6}
+add_wave {{/sim/MCU/State_Machine/PS}} 
+current_wave_config {Untitled 6}
+add_wave {{/sim/MCU/State_Machine/NS}} 
+restart
+run all
+current_wave_config {Untitled 6}
+add_wave {{/sim/MCU/otter_memory/MEM_DOUT1}} 
+restart
+run all
+close_sim
