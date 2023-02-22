@@ -1,0 +1,380 @@
+
+*** Running vivado
+    with args -log Otter_MCU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Otter_MCU.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Otter_MCU.tcl -notrace
+Command: synth_design -top Otter_MCU -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 101791
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 10720 ; free virtual = 19062
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Otter_MCU' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'add4adder' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'add4adder' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'mux6sel' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'mux6sel' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'program_counter' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'program_counter' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:48]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'otter_memory.mem'; please make sure the file is added to project and has read permission, ignoring [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:73]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:95]
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:48]
+INFO: [Synth 8-6157] synthesizing module 'REG_FILE' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'REG_FILE' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv:32]
+INFO: [Synth 8-6157] synthesizing module 'IMMED_GEN' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'IMMED_GEN' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'BRANCH_ADDR_GEN' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'BRANCH_ADDR_GEN' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'BRANCH_COND_GEN' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'BRANCH_COND_GEN' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'CU_DCDR' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_DCDR.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'CU_DCDR' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_DCDR.sv:17]
+WARNING: [Synth 8-689] width (32) of port connection 'int_taken' does not match port width (1) of module 'CU_DCDR' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:136]
+INFO: [Synth 8-6157] synthesizing module 'CU_FSM' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_FSM.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'CU_FSM' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_FSM.sv:24]
+WARNING: [Synth 8-689] width (32) of port connection 'csr_WE' does not match port width (1) of module 'CU_FSM' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:159]
+WARNING: [Synth 8-689] width (32) of port connection 'int_taken' does not match port width (1) of module 'CU_FSM' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:160]
+WARNING: [Synth 8-689] width (32) of port connection 'mret_exec' does not match port width (1) of module 'CU_FSM' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:161]
+INFO: [Synth 8-6155] done synthesizing module 'Otter_MCU' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:17]
+WARNING: [Synth 8-87] always_comb on 'NS_reg' did not result in combinational logic [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_FSM.sv:71]
+WARNING: [Synth 8-3848] Net csr_RD in module/entity Otter_MCU does not have driver. [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:34]
+WARNING: [Synth 8-3848] Net mtvec in module/entity Otter_MCU does not have driver. [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:34]
+WARNING: [Synth 8-3848] Net mepc in module/entity Otter_MCU does not have driver. [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:34]
+WARNING: [Synth 8-7129] Port CS_INTR in module CU_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIZE_SIGN[14] in module CU_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIZE_SIGN[13] in module CU_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIZE_SIGN[12] in module CU_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port int_taken in module CU_DCDR is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 11704 ; free virtual = 20048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 11700 ; free virtual = 20044
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11695 ; free virtual = 20039
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+WARNING: [Synth 8-327] inferring latch for variable 'NS_reg' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_FSM.sv:71]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11639 ; free virtual = 19985
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
++---RAMs : 
+	             512K Bit	(16384 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   9 Input   32 Bit        Muxes := 2     
+	  16 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 4     
+	  11 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 3     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   9 Input    4 Bit        Muxes := 1     
+	  11 Input    4 Bit        Muxes := 1     
+	  11 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 3     
+	   9 Input    1 Bit        Muxes := 1     
+	  11 Input    1 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 7     
+	   4 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port CS_INTR in module CU_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIZE_SIGN[14] in module CU_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIZE_SIGN[13] in module CU_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIZE_SIGN[12] in module CU_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port int_taken in module CU_DCDR is either unconnected or has no load
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
+WARNING: [Synth 8-3332] Sequential element (State_Machine/NS_reg[2]) is unused and will be removed from module Otter_MCU.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11248 ; free virtual = 19621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Otter_MCU   | otter_memory/memory_reg | 16 K x 32(READ_FIRST)  | W | R | 16 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 16     | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object              | Inference | Size (Depth x Width) | Primitives   | 
++------------+-------------------------+-----------+----------------------+--------------+
+|Otter_MCU   | registers/registers_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++------------+-------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11248 ; free virtual = 19622
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Otter_MCU   | otter_memory/memory_reg | 16 K x 32(READ_FIRST)  | W | R | 16 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 16     | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+-------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object              | Inference | Size (Depth x Width) | Primitives   | 
++------------+-------------------------+-----------+----------------------+--------------+
+|Otter_MCU   | registers/registers_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++------------+-------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11247 ; free virtual = 19621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11261 ; free virtual = 19634
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11261 ; free virtual = 19634
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11261 ; free virtual = 19634
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11261 ; free virtual = 19634
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11261 ; free virtual = 19634
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11261 ; free virtual = 19634
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    67|
+|3     |LUT1     |    33|
+|4     |LUT2     |   205|
+|5     |LUT3     |   161|
+|6     |LUT4     |   230|
+|7     |LUT5     |   260|
+|8     |LUT6     |   737|
+|9     |MUXF7    |   113|
+|10    |MUXF8    |    54|
+|11    |RAM32M   |    10|
+|12    |RAM32X1D |     4|
+|13    |RAMB36E1 |    16|
+|14    |FDRE     |   107|
+|15    |LD       |     2|
+|16    |IBUF     |    34|
+|17    |OBUF     |    65|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------+----------------+------+
+|      |Instance        |Module          |Cells |
++------+----------------+----------------+------+
+|1     |top             |                |  2099|
+|2     |  PLUS4         |add4adder       |    14|
+|3     |  PROG_COUNT    |program_counter |   129|
+|4     |  State_Machine |CU_FSM          |     9|
+|5     |  alu           |ALU             |    24|
+|6     |  br_addr_gen   |BRANCH_ADDR_GEN |    34|
+|7     |  br_cond_gen   |BRANCH_COND_GEN |    11|
+|8     |  otter_memory  |Memory          |  1600|
+|9     |  registers     |REG_FILE        |   145|
++------+----------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11261 ; free virtual = 19634
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 11267 ; free virtual = 19640
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.570 ; gain = 8.004 ; free physical = 11267 ; free virtual = 19640
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2604.570 ; gain = 0.000 ; free physical = 11358 ; free virtual = 19732
+INFO: [Netlist 29-17] Analyzing 266 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2660.590 ; gain = 0.000 ; free physical = 11271 ; free virtual = 19656
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  LD => LDCE: 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete, checksum: e108f2a3
+INFO: [Common 17-83] Releasing license: Synthesis
+101 Infos, 21 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:25 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 11358 ; free virtual = 19743
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.runs/synth_1/Otter_MCU.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Otter_MCU_utilization_synth.rpt -pb Otter_MCU_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 22 03:29:55 2023...
