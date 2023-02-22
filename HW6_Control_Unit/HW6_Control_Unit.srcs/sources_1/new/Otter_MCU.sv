@@ -31,7 +31,8 @@ module Otter_MCU(
     logic [2:0] pcSource, alu_srcB;
     logic [3:0] alu_fun;
     // note the following are csr and will not be used for HW 6
-    logic [31:0] csr_RD, mtvec, mepc, int_taken, csr_WE, mret_exec;
+    logic [31:0] csr_RD, mtvec, mepc;
+    logic int_taken, csr_WE, mret_exec;
 
     // general connections
     logic[31:0] PC, PCP4, jalr, jal, branch, J_TYPE, B_TYPE, S_TYPE, I_TYPE,

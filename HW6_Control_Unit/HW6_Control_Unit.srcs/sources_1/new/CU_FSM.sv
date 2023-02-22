@@ -196,7 +196,12 @@ module CU_FSM(
                 NS = ST_FETCH;
             end
             default: begin      // if we have some weird state, just reset!
-                    NS = ST_INIT; 
+                PCWRITE =   0;
+                regWRITE =  0;
+                memWE2 =    0;
+                memRDEN1 =  0; 
+                memRDEN2 =  0;
+                NS = ST_INIT; 
             end
         endcase
     end

@@ -70,6 +70,10 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-4590-brian-desktopPC/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -84,6 +88,7 @@ set_property ip_output_repo /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_mem /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory.mem
 read_verilog -library xil_defaultlib -sv {
   /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv
   /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv
@@ -108,6 +113,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/utils_1/imports/synth_1/Otter_MCU.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
