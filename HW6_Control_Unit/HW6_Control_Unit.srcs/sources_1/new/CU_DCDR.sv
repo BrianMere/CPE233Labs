@@ -73,7 +73,7 @@ module CU_DCDR(
                         alu_fun = 4'b0011;
                     end
                     3'b100: begin   // xori
-                        alu_fun = 4'b01000;
+                        alu_fun = 4'b0100;
                     end
                     3'b101: begin   // srai, srli
                         case (IR)
@@ -95,7 +95,7 @@ module CU_DCDR(
                 alu_srcA = 0;
                 alu_srcB = 0;
                 pcSource = 0; // PC++4;
-                rf_wr_sel = 0; // always writing to wd
+                rf_wr_sel = 3; // always writing to wd
                 case(SIZE_SIGN)
                     3'b000: begin   // add, sub
                         case (IR)
@@ -113,7 +113,7 @@ module CU_DCDR(
                         alu_fun = 4'b0011;
                     end
                     3'b100: begin   // xor
-                        alu_fun = 4'b01000;
+                        alu_fun = 4'b0100;
                     end
                     3'b101: begin   // sra, srl
                         case (IR)

@@ -1,0 +1,6 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.sim/sim_1/synth/func/xsim/sim_func_synth.v,1677113837,verilog,,,,ALU;BRANCH_ADDR_GEN;BRANCH_COND_GEN;CU_FSM;Memory;Otter_MCU;REG_FILE;add4adder;glbl;program_counter,,uvm,,,,,,
+C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sim_1/new/sim.sv,1677095921,systemVerilog,,,,sim,,uvm,,,,,,

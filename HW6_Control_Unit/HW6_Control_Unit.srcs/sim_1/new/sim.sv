@@ -28,35 +28,38 @@ module sim(
         #1 switch_clk();
         #1 switch_clk();
         reset = 0;
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
-        #1 switch_clk();
+        for (int i = 0; i < 300;i++) begin
+            #1 switch_clk();
+        end
+        
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
+        // #1 switch_clk();
         
         
     end

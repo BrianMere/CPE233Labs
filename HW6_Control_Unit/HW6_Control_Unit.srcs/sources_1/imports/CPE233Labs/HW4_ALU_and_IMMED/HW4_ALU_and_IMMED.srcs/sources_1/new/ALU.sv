@@ -46,9 +46,9 @@ module ALU(
             4'b0101: result = srcA >> srcB[4:0]; // Logical Shift Right (SRL). ONLY USE 5 LSBs!
             4'b0001: result = srcA << srcB[4:0]; // Logical Shift Left (SLL)
             4'b1101: result = $signed(srcA) >>> srcB[4:0]; // Arithmatic Shift Right (SRA)
-            4'b0010: result = ($signed(srcA) < $signed(srcB)); 
+            4'b0010: result = ($signed(srcA) < $signed(srcB)) ? 1 : 0; 
             // slt: set to if less than, else 0. SV default to signed
-            4'b0011: result = (srcA < srcB); 
+            4'b0011: result = (srcA < srcB) ? 1 : 0; 
             //sltu: same as above but w/ unsigned values
             4'b1001: result = srcA; 
             // lui-copy: lui will load all but the lower 12 bits, which then are handled by addi.

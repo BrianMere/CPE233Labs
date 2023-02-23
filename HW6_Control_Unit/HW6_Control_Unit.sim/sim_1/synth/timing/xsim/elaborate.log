@@ -1,0 +1,61 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L uvm -L simprims_ver -L secureip --snapshot sim_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'IOBUS_IN' is not connected on this instance [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sim_1/new/sim.sv:14]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "sim_time_synth.sdf", for root module "sim/MCU".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "sim_time_synth.sdf", for root module "sim/MCU".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.add4adder
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.program_counter
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module xil_defaultlib.CU_FSM
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.BRANCH_ADDR_GEN
+Compiling module xil_defaultlib.BRANCH_COND_GEN
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.MUXF8
+Compiling module simprims_ver.MUXF7
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0111111100...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB36E1(READ_WIDTH_A=36,READ_WI...
+Compiling module xil_defaultlib.Memory
+Compiling module simprims_ver.RAMD32
+Compiling module simprims_ver.RAMS32
+Compiling module xil_defaultlib.RAM32M_UNIQ_BASE_
+Compiling module xil_defaultlib.RAM32M_HD1
+Compiling module xil_defaultlib.RAM32M_HD2
+Compiling module xil_defaultlib.RAM32M_HD3
+Compiling module xil_defaultlib.RAM32X1D_UNIQ_BASE_
+Compiling module xil_defaultlib.RAM32X1D_HD4
+Compiling module xil_defaultlib.RAM32M_HD5
+Compiling module xil_defaultlib.RAM32M_HD6
+Compiling module xil_defaultlib.RAM32M_HD7
+Compiling module xil_defaultlib.RAM32M_HD8
+Compiling module xil_defaultlib.RAM32M_HD9
+Compiling module xil_defaultlib.RAM32X1D_HD10
+Compiling module xil_defaultlib.RAM32X1D_HD11
+Compiling module xil_defaultlib.RAM32M_HD12
+Compiling module xil_defaultlib.REG_FILE
+Compiling module xil_defaultlib.Otter_MCU
+Compiling module xil_defaultlib.sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_time_synth

@@ -14,12 +14,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 // Define all states here, as SV will handle the numbering for us :)
-typedef enum  {  
-    ST_INIT,        // default to here on startup
-    ST_FETCH,       // waits an extra clock cycle to get the next intstruction
-    ST_EXEC,        // have the instruction actually go through the main MCU
-    ST_WRITEBACK    // wait an extra clock cycle so that load instructions are handled.
-} state;
 
 module CU_FSM(
     input RST,               // Reset the entirety of the computer. PC -> 0 and so on.
@@ -38,6 +32,13 @@ module CU_FSM(
     output logic mret_exec   // Not used until future HW
     );
 
+    typedef enum  {  
+    ST_INIT,        // default to here on startup
+    ST_FETCH,       // waits an extra clock cycle to get the next intstruction
+    ST_EXEC,        // have the instruction actually go through the main MCU
+    ST_WRITEBACK    // wait an extra clock cycle so that load instructions are handled.
+    } state;
+
     state PS, NS; // define next-state and previous state under enum type
 
     // State register
@@ -47,7 +48,7 @@ module CU_FSM(
         end
         else begin
             PS <= NS;        // usually just have present-state be the next state.
-        end    
+        end 
     end
 
     // Next-State Logic
@@ -82,6 +83,7 @@ module CU_FSM(
             end
             ST_EXEC: begin
                 reset = 0;
+                NS = ST_FETCH;
                 case(OPCODE) 
                     // Let's go in the order of opcode size ...
                     7'b0000011: begin // lb, lbu, lh, lhu, lw
@@ -100,8 +102,6 @@ module CU_FSM(
                         memWE2 =    0;
                         memRDEN1 =  1; // optional
                         memRDEN2 =  0;
-
-                        NS = ST_FETCH;
                     end
                     7'b0110011: begin // add, and, or, sll, slt, sltu, sra, srl, sub, xor
                         PCWRITE =   1;
@@ -109,8 +109,6 @@ module CU_FSM(
                         memWE2 =    0;
                         memRDEN1 =  1; // optional
                         memRDEN2 =  0;
-
-                        NS = ST_FETCH;
                     end
                     7'b0110111: begin // only for lui
                         PCWRITE =   1;
@@ -118,8 +116,6 @@ module CU_FSM(
                         memWE2 =    0;
                         memRDEN1 =  1; // optional
                         memRDEN2 =  0;
-
-                        NS = ST_FETCH;
                     end
                     7'b0010111: begin // only for auipc
                         PCWRITE =   1;
@@ -127,8 +123,6 @@ module CU_FSM(
                         memWE2 =    0;
                         memRDEN1 =  1; // optional
                         memRDEN2 =  0;
-
-                        NS = ST_FETCH;
                     end
                     7'b1100011: begin // beq, bge, bgeu, blt, bltu, and bne
                         PCWRITE =   1;
@@ -136,8 +130,6 @@ module CU_FSM(
                         memWE2 =    0;
                         memRDEN1 =  1; // optional
                         memRDEN2 =  0;
-
-                        NS = ST_FETCH;
                     end
                     7'b1101111: begin // just jal
                         PCWRITE =   1;
@@ -145,8 +137,6 @@ module CU_FSM(
                         memWE2 =    0;
                         memRDEN1 =  1; // optional
                         memRDEN2 =  0;
-
-                        NS = ST_FETCH;
                     end
                     7'b1100111: begin // just jalr
                         PCWRITE =   1;
@@ -154,8 +144,6 @@ module CU_FSM(
                         memWE2 =    0;
                         memRDEN1 =  1; // optional
                         memRDEN2 =  0;
-
-                        NS = ST_FETCH;
                     end
                     7'b0100011: begin // sb, sh, sw
                         PCWRITE =   1;
@@ -163,8 +151,6 @@ module CU_FSM(
                         memWE2 =    1;
                         memRDEN1 =  1; // optional
                         memRDEN2 =  0; // don't need as we are storing, not reading
-
-                        NS = ST_FETCH;
                     end
                     7'b1110011: begin // csrrw, mret. DO NOT DO RIGHT NOW
                         // ... (TODO)

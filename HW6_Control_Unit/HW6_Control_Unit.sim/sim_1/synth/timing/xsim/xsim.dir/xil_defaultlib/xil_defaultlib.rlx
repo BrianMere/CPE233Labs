@@ -1,0 +1,6 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.sim/sim_1/synth/timing/xsim/sim_time_synth.v,1677113847,verilog,,,,ALU;BRANCH_ADDR_GEN;BRANCH_COND_GEN;CU_FSM;Memory;Otter_MCU;RAM32M_HD1;RAM32M_HD12;RAM32M_HD2;RAM32M_HD3;RAM32M_HD5;RAM32M_HD6;RAM32M_HD7;RAM32M_HD8;RAM32M_HD9;RAM32M_UNIQ_BASE_;RAM32X1D_HD10;RAM32X1D_HD11;RAM32X1D_HD4;RAM32X1D_UNIQ_BASE_;REG_FILE;add4adder;glbl;program_counter,,uvm,,,,,,
+C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sim_1/new/sim.sv,1677095921,systemVerilog,,,,sim,,uvm,,,,,,

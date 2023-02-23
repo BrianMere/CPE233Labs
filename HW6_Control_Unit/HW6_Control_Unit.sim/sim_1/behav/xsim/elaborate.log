@@ -9,7 +9,6 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling package xil_defaultlib.$unit_ALU_sv_1727314171
 Compiling module xil_defaultlib.add4adder
 Compiling module xil_defaultlib.mux6sel
 Compiling module xil_defaultlib.program_counter
