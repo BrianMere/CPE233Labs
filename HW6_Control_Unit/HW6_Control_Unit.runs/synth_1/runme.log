@@ -3,15 +3,14 @@
     with args -log Otter_MCU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Otter_MCU.tcl
 
 
-
 ****** Vivado v2022.1 (64-bit)
-  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
   **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source Otter_MCU.tcl -notrace
-Command: read_checkpoint -auto_incremental -incremental C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/utils_1/imports/synth_1/Otter_MCU.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/utils_1/imports/synth_1/Otter_MCU.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/utils_1/imports/synth_1/Otter_MCU.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/utils_1/imports/synth_1/Otter_MCU.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top Otter_MCU -part xc7a35tcpg236-1
 Starting synth_design
@@ -19,59 +18,59 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17184
+INFO: [Synth 8-7075] Helper process launched with PID 15209
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 14531 ; free virtual = 21061
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Otter_MCU' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'add4adder' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv:19]
-INFO: [Synth 8-6155] done synthesizing module 'add4adder' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv:19]
-INFO: [Synth 8-6157] synthesizing module 'mux6sel' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'mux6sel' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'program_counter' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv:19]
-INFO: [Synth 8-6155] done synthesizing module 'program_counter' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv:19]
-INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:48]
-INFO: [Synth 8-3876] $readmem data file 'otter_memory.mem' is read successfully [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:73]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:95]
-INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:48]
-INFO: [Synth 8-6157] synthesizing module 'REG_FILE' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv:32]
-INFO: [Synth 8-6155] done synthesizing module 'REG_FILE' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv:32]
-INFO: [Synth 8-6157] synthesizing module 'IMMED_GEN' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv:18]
-INFO: [Synth 8-6155] done synthesizing module 'IMMED_GEN' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv:18]
-INFO: [Synth 8-6157] synthesizing module 'BRANCH_ADDR_GEN' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'BRANCH_ADDR_GEN' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'BRANCH_COND_GEN' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'BRANCH_COND_GEN' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv:31]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv:31]
-INFO: [Synth 8-6157] synthesizing module 'CU_DCDR' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_DCDR.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'CU_DCDR' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_DCDR.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'CU_FSM' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_FSM.sv:18]
-INFO: [Synth 8-6155] done synthesizing module 'CU_FSM' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_FSM.sv:18]
-INFO: [Synth 8-6155] done synthesizing module 'Otter_MCU' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:17]
-WARNING: [Synth 8-3848] Net csr_RD in module/entity Otter_MCU does not have driver. [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:34]
-WARNING: [Synth 8-3848] Net mtvec in module/entity Otter_MCU does not have driver. [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:34]
-WARNING: [Synth 8-3848] Net mepc in module/entity Otter_MCU does not have driver. [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'Otter_MCU' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'add4adder' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'add4adder' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'mux6sel' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'mux6sel' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'program_counter' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'program_counter' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:48]
+INFO: [Synth 8-3876] $readmem data file 'otter_memory.mem' is read successfully [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:73]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:95]
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv:48]
+INFO: [Synth 8-6157] synthesizing module 'REG_FILE' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'REG_FILE' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv:32]
+INFO: [Synth 8-6157] synthesizing module 'IMMED_GEN' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'IMMED_GEN' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'BRANCH_ADDR_GEN' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'BRANCH_ADDR_GEN' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'BRANCH_COND_GEN' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'BRANCH_COND_GEN' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'CU_DCDR' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_DCDR.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'CU_DCDR' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_DCDR.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'CU_FSM' [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_FSM.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'CU_FSM' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_FSM.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'Otter_MCU' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:17]
+WARNING: [Synth 8-3848] Net csr_RD in module/entity Otter_MCU does not have driver. [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:34]
+WARNING: [Synth 8-3848] Net mtvec in module/entity Otter_MCU does not have driver. [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:34]
+WARNING: [Synth 8-3848] Net mepc in module/entity Otter_MCU does not have driver. [/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv:34]
 WARNING: [Synth 8-7129] Port CS_INTR in module CU_FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SIZE_SIGN[14] in module CU_FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SIZE_SIGN[13] in module CU_FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SIZE_SIGN[12] in module CU_FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port int_taken in module CU_DCDR is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 15517 ; free virtual = 22046
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 15513 ; free virtual = 22042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1278.797 ; gain = 0.000
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15511 ; free virtual = 22040
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'CU_FSM'
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
@@ -100,7 +99,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'CU_FSM'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15450 ; free virtual = 21982
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -168,7 +167,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Otter_MCU/otter_memory/memory_reg"
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15108 ; free virtual = 21647
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -199,7 +198,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15098 ; free virtual = 21638
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -259,7 +258,7 @@ INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_14
 INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance otter_memory/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15093 ; free virtual = 21633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -277,37 +276,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15051 ; free virtual = 21591
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15051 ; free virtual = 21591
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15051 ; free virtual = 21591
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15051 ; free virtual = 21591
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15051 ; free virtual = 21591
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15051 ; free virtual = 21591
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -356,18 +355,18 @@ Report Instance Areas:
 |9     |  registers     |REG_FILE        |   147|
 +------+----------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15051 ; free virtual = 21591
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1278.797 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2604.562 ; gain = 8.004 ; free physical = 15054 ; free virtual = 21594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2604.570 ; gain = 8.004 ; free physical = 15054 ; free virtual = 21594
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2604.570 ; gain = 0.000 ; free physical = 15149 ; free virtual = 21692
 INFO: [Netlist 29-17] Analyzing 272 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1278.797 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2660.590 ; gain = 0.000 ; free physical = 15095 ; free virtual = 21633
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 14 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
@@ -377,7 +376,7 @@ Synth Design complete, checksum: 33e3342b
 INFO: [Common 17-83] Releasing license: Synthesis
 108 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1278.797 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.runs/synth_1/Otter_MCU.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 15182 ; free virtual = 21720
+INFO: [Common 17-1381] The checkpoint '/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.runs/synth_1/Otter_MCU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Otter_MCU_utilization_synth.rpt -pb Otter_MCU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Feb 22 17:10:05 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 22 20:45:23 2023...

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.runs/synth_1/Otter_MCU.tcl"
+  variable script "/home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.runs/synth_1/Otter_MCU.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,34 +70,38 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-14109-brian-desktopPC/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.cache/wt [current_project]
-set_property parent.project_path C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.xpr [current_project]
+set_property webtalk.parent_dir /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.cache/wt [current_project]
+set_property parent.project_path /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.cache/ip [current_project]
+set_property ip_output_repo /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory.mem
+read_mem /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory.mem
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_DCDR.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_FSM.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv
-  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_DCDR.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/CU_FSM.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/Downloads/otter_memory_v1_07.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv
+  /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/sources_1/new/Otter_MCU.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -110,7 +114,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/utils_1/imports/synth_1/Otter_MCU.dcp
+read_checkpoint -auto_incremental -incremental /home/brianm/Documents/Repos/CPE233Labs/HW6_Control_Unit/HW6_Control_Unit.srcs/utils_1/imports/synth_1/Otter_MCU.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
