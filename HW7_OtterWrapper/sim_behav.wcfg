@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="sim" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="55,015.666 ns"></ZoomStartTime>
+      <ZoomEndTime time="57,839.667 ns"></ZoomEndTime>
+      <Cursor1Time time="57,369.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="141"></NameColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="divider8" type="divider">
+      <obj_property name="label">Program Counter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#00FFFF</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group41">
+      <obj_property name="label">PC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/sim/otter/CPU/PROG_COUNT/PC_COUNT">
+         <obj_property name="ElementShortName">PC_COUNT[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PC_COUNT[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sim/otter/CPU/PROG_COUNT/PC_WRITE">
+         <obj_property name="ElementShortName">PC_WRITE</obj_property>
+         <obj_property name="ObjectShortName">PC_WRITE</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sim/otter/CPU/PROG_COUNT/PC_RST">
+         <obj_property name="ElementShortName">PC_RST</obj_property>
+         <obj_property name="ObjectShortName">PC_RST</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sim/otter/CPU/PROG_COUNT/CLK">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider42" type="divider">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FF0000</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group43">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/sim/otter/CPU/alu/alu_fun">
+         <obj_property name="ElementShortName">alu_fun[3:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_fun[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/alu/result">
+         <obj_property name="ElementShortName">result[31:0]</obj_property>
+         <obj_property name="ObjectShortName">result[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/alu/srcA">
+         <obj_property name="ElementShortName">srcA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">srcA[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/alu/srcB">
+         <obj_property name="ElementShortName">srcB[31:0]</obj_property>
+         <obj_property name="ObjectShortName">srcB[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/alu_srcA">
+         <obj_property name="ElementShortName">alu_srcA[1:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_srcA[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/alu_srcB">
+         <obj_property name="ElementShortName">alu_srcB[2:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_srcB[2:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider48" type="divider">
+      <obj_property name="label">Instruction</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group49">
+      <obj_property name="label">Memory</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/sim/otter/CPU/otter_memory/MEM_DOUT1">
+         <obj_property name="ElementShortName">MEM_DOUT1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DOUT1[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/otter_memory/MEM_DOUT2">
+         <obj_property name="ElementShortName">MEM_DOUT2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DOUT2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/otter_memory/MEM_ADDR1">
+         <obj_property name="ElementShortName">MEM_ADDR1[13:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_ADDR1[13:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/otter_memory/MEM_ADDR2">
+         <obj_property name="ElementShortName">MEM_ADDR2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_ADDR2[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider54" type="divider">
+      <obj_property name="label">CU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FFD700</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group53">
+      <obj_property name="label">DCDR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/sim/otter/CPU/CU_Decoder/OPCODE">
+         <obj_property name="ElementShortName">OPCODE[6:0]</obj_property>
+         <obj_property name="ObjectShortName">OPCODE[6:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/CU_Decoder/SIZE_SIGN">
+         <obj_property name="ElementShortName">SIZE_SIGN[14:12]</obj_property>
+         <obj_property name="ObjectShortName">SIZE_SIGN[14:12]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/CU_Decoder/IR">
+         <obj_property name="ElementShortName">IR[30:30]</obj_property>
+         <obj_property name="ObjectShortName">IR[30:30]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sim/otter/CPU/CU_Decoder/br_eq">
+         <obj_property name="ElementShortName">br_eq</obj_property>
+         <obj_property name="ObjectShortName">br_eq</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sim/otter/CPU/CU_Decoder/br_lt">
+         <obj_property name="ElementShortName">br_lt</obj_property>
+         <obj_property name="ObjectShortName">br_lt</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sim/otter/CPU/CU_Decoder/br_ltu">
+         <obj_property name="ElementShortName">br_ltu</obj_property>
+         <obj_property name="ObjectShortName">br_ltu</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group55">
+      <obj_property name="label">FSM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/sim/otter/CPU/State_Machine/PS">
+         <obj_property name="ElementShortName">PS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PS[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sim/otter/CPU/State_Machine/memRDEN1">
+         <obj_property name="ElementShortName">memRDEN1</obj_property>
+         <obj_property name="ObjectShortName">memRDEN1</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sim/otter/CPU/State_Machine/memRDEN2">
+         <obj_property name="ElementShortName">memRDEN2</obj_property>
+         <obj_property name="ObjectShortName">memRDEN2</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider95" type="divider">
+      <obj_property name="label">Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#00FF00</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group96">
+      <obj_property name="label">REG_FILE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/sim/otter/CPU/registers/RF_ADR1">
+         <obj_property name="ElementShortName">RF_ADR1[4:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_ADR1[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/registers/RF_ADR2">
+         <obj_property name="ElementShortName">RF_ADR2[4:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_ADR2[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/registers/RF_WA">
+         <obj_property name="ElementShortName">RF_WA[4:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_WA[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/registers/RF_WD">
+         <obj_property name="ElementShortName">RF_WD[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_WD[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sim/otter/CPU/registers/RF_EN">
+         <obj_property name="ElementShortName">RF_EN</obj_property>
+         <obj_property name="ObjectShortName">RF_EN</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/sim/otter/CPU/registers/CLK">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/registers/RF_RS1">
+         <obj_property name="ElementShortName">RF_RS1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_RS1[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/registers/RF_RS2">
+         <obj_property name="ElementShortName">RF_RS2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_RS2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/sim/otter/CPU/registers/registers">
+         <obj_property name="ElementShortName">registers[0:31][31:0]</obj_property>
+         <obj_property name="ObjectShortName">registers[0:31][31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider106" type="divider">
+      <obj_property name="label">CPU/Output</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#00FFFF</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group107">
+      <obj_property name="label">CPU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/sim/otter/CPU/rf_wr_sel">
+         <obj_property name="ElementShortName">rf_wr_sel[1:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_wr_sel[1:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/sim/leds">
+      <obj_property name="ElementShortName">leds[15:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[15:0]</obj_property>
+   </wvobject>
+</wave_config>
