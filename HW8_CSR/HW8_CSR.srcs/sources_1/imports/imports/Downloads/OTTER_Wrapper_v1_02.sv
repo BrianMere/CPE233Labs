@@ -16,7 +16,7 @@
 
 module OTTER_Wrapper(
    input CLK,
-   //input BTNL,
+   input BTNL, // used for interrupts
    input BTNC,
    input [15:0] SWITCHES,
    output logic [15:0] LEDS,
@@ -37,6 +37,7 @@ module OTTER_Wrapper(
     
    // Signals for connecting OTTER_MCU to OTTER_wrapper /////////////////////
    logic clk_50 = 0;
+   logic btn_intr;
     
    logic [31:0] IOBUS_out, IOBUS_in, IOBUS_addr;
    logic s_reset, IOBUS_wr;
@@ -45,13 +46,20 @@ module OTTER_Wrapper(
    logic [15:0] r_SSEG;
     
    // Declare OTTER_CPU ////////////////////////////////////////////////////
-   Otter_MCU CPU (.RST(s_reset), .INTR(1'b0), .CLK(clk_50),
+   Otter_MCU CPU (.RST(s_reset), .INTR(btn_intr), .CLK(clk_50),
                   .IOBUS_OUT(IOBUS_out), .IOBUS_IN(IOBUS_in),
                   .IOBUS_ADDR(IOBUS_addr), .IOBUS_WR(IOBUS_wr));
 
    // Declare Seven Segment Display /////////////////////////////////////////
    SevSegDisp SSG_DISP (.DATA_IN(r_SSEG), .CLK(CLK), .MODE(1'b0),
                        .CATHODES(CATHODES), .ANODES(ANODES));
+
+   // Declare Button Debouncer //////////////////////////////////////////////
+   debounce_one_shot Debouncer(
+        .CLK(clk_50),
+        .BTN(BTNL),
+        .DB_BTN(btn_intr)
+   );
    
                            
    // Clock Divider to create 50 MHz Clock //////////////////////////////////

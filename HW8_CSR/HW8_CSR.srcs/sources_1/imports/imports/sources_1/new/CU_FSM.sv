@@ -17,7 +17,7 @@
 
 module CU_FSM(
     input RST,               // Reset the entirety of the computer. PC -> 0 and so on.
-    input CS_INTR,           // Interrupt from CSR and externally. For now connect just external and not use.
+    input CS_INTR,           // Interrupt from CSR and externally.
     input [6:0] OPCODE,      // IR[6:0]: Gives the main opcode for each instruction
     input [14:12] SIZE_SIGN, // IR[12:14]: gives the size and sign for certain operations. 
     input CLK,                 
@@ -27,9 +27,9 @@ module CU_FSM(
     output logic memRDEN1,   // Should we get the next instruction?
     output logic memRDEN2,   // Should we be reading from memory?
     output logic reset,      // Go high if the RST is high
-    output logic csr_WE,     // Not used until next HW
-    output logic int_taken,  // Not used until next HW
-    output logic mret_exec   // Not used until future HW
+    output logic csr_WE,     // Allows writes to CSR
+    output logic int_taken,  // Say we are in an interrupt right now.
+    output logic mret_exec   // Says that we are executing an mret instruction.
     );
 
     typedef enum  {  
@@ -165,10 +165,48 @@ module CU_FSM(
                     7'b1110011: begin // csrrw, mret.
                         case (SIZE_SIGN)
                             3'b001: begin   // csrrw
-                                
+                                PCWRITE =   1; // need to write to PC the ISR!
+                                regWRITE =  1; // writing to a register per the ISA
+                                memWE2 =    0; // no writing to memory here
+                                memRDEN1 =  1; // optional
+                                memRDEN2 =  0; // don't need as we are storing, not reading
+                                reset =     0; 
+                                csr_WE =    1; // NEED to write to csr the certain value.
+                                int_taken = 0; // we aren't in an interrupt yet. Later ...
+                                mret_exec = 0; // this isn't mret you silly billy!
+                            end
+                            3'b010: begin   // csrrs
+                                PCWRITE =   1; // still writing lol
+                                regWRITE =  1; // saving to rd
+                                memWE2 =    0; // not writing to memory
+                                memRDEN1 =  1; // get IR
+                                memRDEN2 =  0; // not saving to memory
+                                reset =     0; 
+                                csr_WE =    1; // need to write to CSR
+                                int_taken = 0; // not taken during these times
+                                mret_exec = 0; // not mret.
+                            end
+                            3'b011: begin   // csrrc
+                                PCWRITE =   1; // still writing lol
+                                regWRITE =  1; // saving to rd
+                                memWE2 =    0; // not writing to memory
+                                memRDEN1 =  1; // get IR
+                                memRDEN2 =  0; // not saving to memory
+                                reset =     0; 
+                                csr_WE =    1; // need to write to CSR
+                                int_taken = 0; // not taken during these times
+                                mret_exec = 0; // not mret.
                             end
                             3'b000: begin   // mret
-                                
+                                PCWRITE =   1; // need to write to PC the mepc!
+                                regWRITE =  0; // mret doesn't write to a register
+                                memWE2 =    0; // no writing to memory here
+                                memRDEN1 =  1; // optional
+                                memRDEN2 =  0; // don't need as we are storing, not reading
+                                reset =     0; 
+                                csr_WE =    0; // should leave off as we are reading values in the isr.
+                                int_taken = 0; // aren't in an interrupt here.
+                                mret_exec = 1; // this IS mret you oh shoot!!
                             end
                             default: begin  // never should happen but just in case ...
                                 PCWRITE = 0;
@@ -215,7 +253,7 @@ module CU_FSM(
                     NS = ST_FETCH;
                 end
 
-                NS = ST_FETCH;
+                // NS = ST_FETCH;
             end
             ST_INTRPT: begin   // on an interrupt
                 reset = 0;
@@ -225,9 +263,11 @@ module CU_FSM(
                 memRDEN1 =  1; // need to get instructions right?
                 memRDEN2 =  0; // not loading from memory 
 
-                csr_WE = 1;    // need to write the PC to CSR MEPC
+                csr_WE = 0;    // don't explicitly write to CSR here. Doing that in csrrw, ...
                 int_taken = 1; // we need to let CSR know of our interrupt 
                 mret_exec = 0; // not running mret right now. Used in ST_EXEC.
+
+                NS = ST_FETCH; // return back to ST_FETCH after an interrupt ...
             end
             default: begin      // if we have some weird state, just reset!
                 PCWRITE =   0;

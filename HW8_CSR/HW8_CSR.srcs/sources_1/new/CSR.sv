@@ -43,45 +43,72 @@ module CSR(
     );
 
     // the CSR is essentially another REG_FILE so I'm designing it as such
-    logic[31:0] csr_regs[0:4095]; // since ADDR is 12 bits, we can access 2^12 registers
+    logic[31:0] csr_mtvec, csr_mepc, csr_mstatus;
 
     // like with REG_FILE we'll just reset everything to 0's on boot.
-    initial begin
-        int i;
-        for(i = 0; i < 4095; i=i+1) begin
-            csr_regs[i] = 0; //reset selected register to 0.
-        end
-    end
+    // initial begin
+    //     csr_mtvec = 0;
+    //     csr_mepc = 0;
+    //     csr_mstatus = 0;
+    // end
 
     // write operations. Like with REG_FILE always synch
     always_ff @ (posedge CSR_CLK) begin
-        if(CSR_WR_EN) begin
-            csr_regs[CSR_ADDR[31:20]] <= CSR_WD;
+
+        if(CSR_RST) begin
+            csr_mtvec <= 0;
+            csr_mepc <= 0;
+            csr_mstatus <= 0;
         end
 
-        if(CSR_MSTATUS_B3) begin        // check for intterupts now!
+        else if(CSR_WR_EN) begin
+            case (CSR_ADDR)
+                12'h300: csr_mstatus <= CSR_WD;  // MSTATUS at    0x300
+                12'h341: csr_mepc <= CSR_WD;     // MEPC at       0x341
+                12'h305: csr_mtvec <= CSR_WD;    // MTVEC at      0x305
+                default: ; // don't write lol
+            endcase
+        end
+
+        else if(CSR_MSTATUS_B3) begin        // check for intterupts now!
             // when we do an INT_TAKEN
             if(CSR_INT_TAKEN) begin
-                // save current PC count
-                CSR_MEPC <= CSR_PC;
+                // save current PC count. Needs to be here since PC count is dependent on intr PC.
+                csr_mepc <= CSR_PC;
+
                 // copy mtvec to PC. PC source helps read mtvec, so nothing here
-                //TODO: FINISH
+
+                // save bit 3 of mstatus to bit 7 and disable (set to 0)
+                csr_mstatus[7] <= csr_mstatus[3];
+                csr_mstatus[3] <= 0;
             end
-            else if (CSR_mret_exec) begin // mret
-                
-            end
+        end
+
+        if (CSR_mret_exec) begin // mret
+                // load the current value in mepc to CSR_MEPC (output)
+                // handled in the combinational logic
+
+                // mtvec doesn't ever really change. 
+
+                // return bit 3 from bit 7.
+                csr_mstatus[3] <= csr_mstatus[7];
+                csr_mstatus[7] <= 0;
         end
     end
 
     // read operations. Like with REG_FILE always asynch
     always_comb begin
         // always be putting out what's currently being read in the ADDR register.
-        CSR_RD = csr_regs[CSR_ADDR[31:20]];
+        case (CSR_ADDR)
+            12'h300: CSR_RD = csr_mstatus;  // MSTATUS at    0x300
+            12'h341: CSR_RD = csr_mepc;     // MEPC at       0x341
+            12'h305: CSR_RD = csr_mtvec;    // MTVEC at      0x305
+        endcase
 
         // the following are always just output and have constant addresses per the manual.
-        CSR_MSTATUS_B3 = csr_regs[12'h300][3];     // MSTATUS at    0x300. Access bit 3.
-        CSR_MEPC = csr_regs[12'h341];              // MEPC at       0x341
-        CSR_MTVEC = csr_regs[12'h305];             // MTVEC at      0x305              
+        CSR_MSTATUS_B3 = csr_mstatus[3];        // MSTATUS at    0x300. Access bit 3.
+        CSR_MEPC = csr_mepc;                    // MEPC at       0x341
+        CSR_MTVEC = csr_mtvec;                  // MTVEC at      0x305              
     end
 
 endmodule

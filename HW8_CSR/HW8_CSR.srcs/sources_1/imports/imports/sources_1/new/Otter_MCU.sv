@@ -30,9 +30,9 @@ module Otter_MCU(
     logic [1:0] rf_wr_sel, alu_srcA;
     logic [2:0] pcSource, alu_srcB;
     logic [3:0] alu_fun;
-    // note the following are csr and will not be used for HW 6
+    // note the following are csr
     logic [31:0] csr_RD, mtvec, mepc;
-    logic int_taken, csr_WE, mret_exec;
+    logic int_taken, csr_WE, mret_exec, mstatus_b3;
 
     // general connections
     logic[31:0] PC, PCP4, jalr, jal, branch, J_TYPE, B_TYPE, S_TYPE, I_TYPE,
@@ -147,7 +147,7 @@ module Otter_MCU(
 
     CU_FSM State_Machine(
         .RST(RST),
-        .CS_INTR(INTR), // TODO: hookup and gate with CSR later
+        .CS_INTR(INTR & mstatus_b3),
         .OPCODE(IR[6:0]),
         .SIZE_SIGN(IR[14:12]),
         .CLK(CLK),
@@ -160,6 +160,21 @@ module Otter_MCU(
         .csr_WE(csr_WE),
         .int_taken(int_taken),
         .mret_exec(mret_exec)
+    );
+
+    CSR CSR(
+        .CSR_RST(RST),
+        .CSR_mret_exec(mret_exec),
+        .CSR_INT_TAKEN(int_taken),
+        .CSR_ADDR(IR[31:20]),
+        .CSR_WR_EN(csr_WE),
+        .CSR_PC(PC),
+        .CSR_WD(result),
+        .CSR_CLK(CLK),
+        .CSR_MSTATUS_B3(mstatus_b3),
+        .CSR_MEPC(mepc),
+        .CSR_MTVEC(mtvec),
+        .CSR_RD(csr_RD)
     );
 
     always_comb begin

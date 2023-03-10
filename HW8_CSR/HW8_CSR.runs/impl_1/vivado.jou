@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Mar 10 12:19:22 2023
+# Process ID: 78204
+# Current directory: /home/brianm/Documents/Repos/CPE233Labs/HW8_CSR/HW8_CSR.runs/impl_1
+# Command line: vivado -log OTTER_Wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source OTTER_Wrapper.tcl -notrace
+# Log file: /home/brianm/Documents/Repos/CPE233Labs/HW8_CSR/HW8_CSR.runs/impl_1/OTTER_Wrapper.vdi
+# Journal file: /home/brianm/Documents/Repos/CPE233Labs/HW8_CSR/HW8_CSR.runs/impl_1/vivado.jou
+# Running On: brian-desktopPC, OS: Linux, CPU Frequency: 4299.990 MHz, CPU Physical cores: 6, Host memory: 33576 MB
+#-----------------------------------------------------------
+source OTTER_Wrapper.tcl -notrace

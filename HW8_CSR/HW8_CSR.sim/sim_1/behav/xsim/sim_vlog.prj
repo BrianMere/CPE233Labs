@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/SevSeg_SV/BCD.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv" \
+"../../../../HW8_CSR.srcs/sources_1/new/CSR.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/new/CU_DCDR.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/new/CU_FSM.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/SevSeg_SV/CathodeDriver.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/Downloads/OTTER_Wrapper_v1_02.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/new/Otter_MCU.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/SevSeg_SV/SevSegDisp.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/Downloads/debounce_one_shot.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv" \
+"../../../../HW8_CSR.srcs/sources_1/imports/imports/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv" \
+"../../../../HW8_CSR.srcs/sim_1/new/sim.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
