@@ -103,6 +103,7 @@ module CSR(
             12'h300: CSR_RD = csr_mstatus;  // MSTATUS at    0x300
             12'h341: CSR_RD = csr_mepc;     // MEPC at       0x341
             12'h305: CSR_RD = csr_mtvec;    // MTVEC at      0x305
+            default: CSR_RD = 0;            // default by reading 0's. 
         endcase
 
         // the following are always just output and have constant addresses per the manual.

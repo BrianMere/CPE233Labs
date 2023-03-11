@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-| Date         : Fri Mar 10 12:19:48 2023
+| Date         : Fri Mar 10 17:43:26 2023
 | Host         : brian-desktopPC running 64-bit Manjaro Linux
 | Command      : report_control_sets -verbose -file OTTER_Wrapper_control_sets_placed.rpt
 | Design       : OTTER_Wrapper
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    18 |
-|    Minimum number of control sets                        |    18 |
+| Total control sets                                       |    17 |
+|    Minimum number of control sets                        |    17 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    38 |
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    18 |
+| Total control sets |    17 |
 | >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     2 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     1 |
-| >= 16              |    11 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    10 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,39 +58,38 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              58 |           41 |
+| No           | No                    | No                     |              24 |           17 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              32 |           10 |
-| Yes          | No                    | No                     |              68 |           34 |
+| Yes          | No                    | No                     |              36 |           18 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             140 |           72 |
+| Yes          | Yes                   | No                     |             174 |           96 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------+------------------------------------------------+------------------------------------------+------------------+----------------+--------------+
-|         Clock Signal        |                  Enable Signal                 |             Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------------------+------------------------------------------------+------------------------------------------+------------------+----------------+--------------+
-|  CLK_IBUF_BUFG              |                                                |                                          |                2 |              2 |         1.00 |
-|  SSG_DISP/CathMod/s_clk_500 |                                                | SSG_DISP/CathMod/r_disp_digit[0]_i_1_n_1 |                1 |              2 |         2.00 |
-|  SSG_DISP/CathMod/s_clk_500 |                                                | SSG_DISP/CathMod/r_disp_digit[0]         |                1 |              2 |         2.00 |
-|  clk_50_BUFG                | CPU/State_Machine/memRDEN1                     |                                          |                1 |              4 |         4.00 |
-|  clk_50_BUFG                |                                                | Debouncer/s_db_count[7]_i_1_n_1          |                3 |              8 |         2.67 |
-|  SSG_DISP/CathMod/s_clk_500 |                                                |                                          |                5 |              9 |         1.80 |
-|  clk_50_BUFG                |                                                |                                          |               11 |             15 |         1.36 |
-|  clk_50_BUFG                | CPU/State_Machine/FSM_sequential_PS_reg[0]_4   | CPU/otter_memory/ioBuffer[15]_i_1_n_1    |                7 |             16 |         2.29 |
-|  clk_50_BUFG                | CPU/otter_memory/LEDS[15]_i_5_0[0]             |                                          |               11 |             16 |         1.45 |
-|  clk_50_BUFG                | CPU/otter_memory/ioBuffer[15]_i_3_0[0]         |                                          |                5 |             16 |         3.20 |
-|  CLK_IBUF_BUFG              |                                                | SSG_DISP/CathMod/clear                   |                5 |             20 |         4.00 |
-|  clk_50_BUFG                | CPU/otter_memory/p_1_in[0]                     | CPU/otter_memory/BTNC                    |               20 |             28 |         1.40 |
-|  clk_50_BUFG                | CPU/State_Machine/csr_mstatus_reg[3][0]        | BTNC_IBUF                                |               11 |             32 |         2.91 |
-|  clk_50_BUFG                | registers_reg_r1_0_31_0_5_i_78_n_1             |                                          |               17 |             32 |         1.88 |
-|  clk_50_BUFG                | CPU/otter_memory/FSM_sequential_PS_reg[0]_2[0] | BTNC_IBUF                                |               17 |             32 |         1.88 |
-|  clk_50_BUFG                | CPU/State_Machine/E[0]                         | CPU/State_Machine/SR[0]                  |               17 |             32 |         1.88 |
-|  n_0_1603_BUFG              |                                                |                                          |               23 |             32 |         1.39 |
-|  clk_50_BUFG                | CPU/State_Machine/regWrite                     |                                          |               11 |             88 |         8.00 |
-+-----------------------------+------------------------------------------------+------------------------------------------+------------------+----------------+--------------+
++-----------------------------+----------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+|         Clock Signal        |                 Enable Signal                |                 Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------+----------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+|  CLK_IBUF_BUFG              |                                              |                                                 |                2 |              2 |         1.00 |
+|  SSG_DISP/CathMod/s_clk_500 |                                              | SSG_DISP/CathMod/r_disp_digit[0]_i_1_n_0        |                1 |              2 |         2.00 |
+|  SSG_DISP/CathMod/s_clk_500 |                                              | SSG_DISP/CathMod/r_disp_digit[0]                |                1 |              2 |         2.00 |
+|  clk_50_BUFG                | CPU/State_Machine/memRDEN1                   |                                                 |                4 |              4 |         1.00 |
+|  clk_50_BUFG                |                                              | Debouncer/s_db_count[7]_i_1_n_0                 |                3 |              8 |         2.67 |
+|  SSG_DISP/CathMod/s_clk_500 |                                              |                                                 |                6 |              9 |         1.50 |
+|  clk_50_BUFG                |                                              |                                                 |                9 |             13 |         1.44 |
+|  clk_50_BUFG                | CPU/State_Machine/FSM_sequential_PS_reg[2]_0 | CPU/otter_memory/ioBuffer[15]_i_1_n_0           |               11 |             16 |         1.45 |
+|  clk_50_BUFG                | CPU/otter_memory/FSM_sequential_PS_reg[1]_7  | CPU/otter_memory/memory_reg_bram_0_i_79_1       |                9 |             16 |         1.78 |
+|  clk_50_BUFG                | CPU/otter_memory/FSM_sequential_PS_reg[1]_6  | CPU/otter_memory/memory_reg_bram_0_i_79_0       |                7 |             16 |         2.29 |
+|  CLK_IBUF_BUFG              |                                              | SSG_DISP/CathMod/clear                          |                5 |             20 |         4.00 |
+|  clk_50_BUFG                | CPU/otter_memory/p_1_in[0]                   | BTNC_IBUF                                       |               15 |             30 |         2.00 |
+|  clk_50_BUFG                | CPU/otter_memory/FSM_sequential_PS_reg[0][0] | BTNC_IBUF                                       |               17 |             32 |         1.88 |
+|  clk_50_BUFG                | CPU/otter_memory/E[0]                        | BTNC_IBUF                                       |               14 |             32 |         2.29 |
+|  clk_50_BUFG                | registers_reg_r1_0_31_0_5_i_133_n_0          |                                                 |               14 |             32 |         2.29 |
+|  clk_50_BUFG                | CPU/State_Machine/E[0]                       | CPU/State_Machine/FSM_sequential_PS_reg[1]_4[0] |               23 |             32 |         1.39 |
+|  clk_50_BUFG                | CPU/State_Machine/regWrite                   |                                                 |               11 |             88 |         8.00 |
++-----------------------------+----------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
 
 

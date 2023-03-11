@@ -11,54 +11,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="1,420.000001 us"></ZoomEndTime>
-      <Cursor1Time time="0.000000 us"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="71.201 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="141"></NameColumnWidth>
-      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+      <ValueColumnWidth column_width="100"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="32" />
-   <wvobject type="logic" fp_name="/sim/CLK">
-      <obj_property name="ElementShortName">CLK</obj_property>
-      <obj_property name="ObjectShortName">CLK</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim/BTNL">
-      <obj_property name="ElementShortName">BTNL</obj_property>
-      <obj_property name="ObjectShortName">BTNL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim/otter/btn_intr">
-      <obj_property name="ElementShortName">btn_intr</obj_property>
-      <obj_property name="ObjectShortName">btn_intr</obj_property>
-   </wvobject>
+   <WVObjectSize size="11" />
    <wvobject type="logic" fp_name="/sim/BTNC">
       <obj_property name="ElementShortName">BTNC</obj_property>
       <obj_property name="ObjectShortName">BTNC</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim/SWITCHES">
-      <obj_property name="ElementShortName">SWITCHES[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SWITCHES[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim/LEDS">
-      <obj_property name="ElementShortName">LEDS[15:0]</obj_property>
-      <obj_property name="ObjectShortName">LEDS[15:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/sim/otter/r_SSEG">
       <obj_property name="ElementShortName">r_SSEG[15:0]</obj_property>
       <obj_property name="ObjectShortName">r_SSEG[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim/CATHODES">
-      <obj_property name="ElementShortName">CATHODES[7:0]</obj_property>
-      <obj_property name="ObjectShortName">CATHODES[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim/ANODES">
-      <obj_property name="ElementShortName">ANODES[3:0]</obj_property>
-      <obj_property name="ObjectShortName">ANODES[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim/i">
-      <obj_property name="ElementShortName">i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="divider67" type="divider">
       <obj_property name="label">MCU</obj_property>
@@ -76,22 +44,6 @@
       <obj_property name="ElementShortName">PC[31:0]</obj_property>
       <obj_property name="ObjectShortName">PC[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim/otter/CPU/registers/registers[10]">
-      <obj_property name="ElementShortName">[10][31:0]</obj_property>
-      <obj_property name="ObjectShortName">[10][31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim/otter/CPU/registers/registers">
-      <obj_property name="ElementShortName">registers[0:31][31:0]</obj_property>
-      <obj_property name="ObjectShortName">registers[0:31][31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim/otter/CPU/CU_Decoder/pcSource">
-      <obj_property name="ElementShortName">pcSource[2:0]</obj_property>
-      <obj_property name="ObjectShortName">pcSource[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim/otter/CPU/otter_memory/MEM_RDEN1">
-      <obj_property name="ElementShortName">MEM_RDEN1</obj_property>
-      <obj_property name="ObjectShortName">MEM_RDEN1</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/sim/otter/CPU/State_Machine/PS">
       <obj_property name="ElementShortName">PS[31:0]</obj_property>
       <obj_property name="ObjectShortName">PS[31:0]</obj_property>
@@ -99,27 +51,6 @@
    <wvobject fp_name="divider72" type="divider">
       <obj_property name="label">CSR</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="group" fp_name="group34">
-      <obj_property name="label">mstatus</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/sim/otter/CPU/CSR/csr_mstatus[3]">
-         <obj_property name="ElementShortName">[3]</obj_property>
-         <obj_property name="ObjectShortName">[3]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/sim/otter/CPU/CSR/csr_mstatus[7]">
-         <obj_property name="ElementShortName">[7]</obj_property>
-         <obj_property name="ObjectShortName">[7]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim/otter/CPU/State_Machine/CS_INTR">
-      <obj_property name="ElementShortName">CS_INTR</obj_property>
-      <obj_property name="ObjectShortName">CS_INTR</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim/otter/CPU/mstatus_b3">
-      <obj_property name="ElementShortName">mstatus_b3</obj_property>
-      <obj_property name="ObjectShortName">mstatus_b3</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/sim/otter/CPU/CSR/CSR_MEPC">
       <obj_property name="ElementShortName">CSR_MEPC[31:0]</obj_property>
@@ -132,29 +63,5 @@
    <wvobject type="array" fp_name="/sim/otter/CPU/CSR/CSR_RD">
       <obj_property name="ElementShortName">CSR_RD[31:0]</obj_property>
       <obj_property name="ObjectShortName">CSR_RD[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim/otter/CPU/CSR/CSR_RST">
-      <obj_property name="ElementShortName">CSR_RST</obj_property>
-      <obj_property name="ObjectShortName">CSR_RST</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim/otter/CPU/CSR/CSR_INT_TAKEN">
-      <obj_property name="ElementShortName">CSR_INT_TAKEN</obj_property>
-      <obj_property name="ObjectShortName">CSR_INT_TAKEN</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim/otter/CPU/CSR/CSR_ADDR">
-      <obj_property name="ElementShortName">CSR_ADDR[31:20]</obj_property>
-      <obj_property name="ObjectShortName">CSR_ADDR[31:20]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim/otter/CPU/CSR/CSR_WR_EN">
-      <obj_property name="ElementShortName">CSR_WR_EN</obj_property>
-      <obj_property name="ObjectShortName">CSR_WR_EN</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim/otter/CPU/CSR/CSR_PC">
-      <obj_property name="ElementShortName">CSR_PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">CSR_PC[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim/otter/CPU/CSR/CSR_CLK">
-      <obj_property name="ElementShortName">CSR_CLK</obj_property>
-      <obj_property name="ObjectShortName">CSR_CLK</obj_property>
    </wvobject>
 </wave_config>

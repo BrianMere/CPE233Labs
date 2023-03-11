@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1678479503" LaunchIncrCheckpoint="$PPRDIR/../../../../HW8_CSR/HW8_CSR.srcs/utils_1/imports/synth_1/OTTER_Wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1678498899" LaunchIncrCheckpoint="$PPRDIR/../../../../HW8_CSR/HW8_CSR.srcs/utils_1/imports/synth_1/OTTER_Wrapper.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="OTTER_Wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="OTTER_Wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="OTTER_Wrapper_utilization_synth.pb"/>
@@ -182,7 +182,6 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="OTTER_Wrapper"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -214,7 +213,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
