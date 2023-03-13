@@ -1,18 +1,18 @@
 #-----------------------------------------------------------
 # Vivado v2022.1 (64-bit)
-# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Feb 27 00:03:33 2023
-# Process ID: 117759
-# Current directory: /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1
-# Command line: vivado -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
-# Log file: /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1/OTTER_Wrapper.vds
-# Journal file: /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1/vivado.jou
-# Running On: brian-desktopPC, OS: Linux, CPU Frequency: 4299.999 MHz, CPU Physical cores: 6, Host memory: 33576 MB
+# Start of session at: Wed Mar  1 11:06:19 2023
+# Process ID: 19044
+# Current directory: C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1
+# Command line: vivado.exe -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
+# Log file: C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1/OTTER_Wrapper.vds
+# Journal file: C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1\vivado.jou
+# Running On: DESKTOP-OJK9U19, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16799 MB
 #-----------------------------------------------------------
 source OTTER_Wrapper.tcl -notrace
-Command: read_checkpoint -auto_incremental -incremental /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/utils_1/imports/synth_1/Otter_MCU.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/utils_1/imports/synth_1/Otter_MCU.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/utils_1/imports/synth_1/Otter_MCU.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/utils_1/imports/synth_1/Otter_MCU.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top OTTER_Wrapper -part xc7a35tcpg236-1
 Starting synth_design
@@ -21,105 +21,105 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 117825
+INFO: [Synth 8-7075] Helper process launched with PID 10372
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 12981 ; free virtual = 20377
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1279.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/Downloads/OTTER_Wrapper_v1_02.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'Otter_MCU' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'add4adder' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv:19]
-INFO: [Synth 8-6155] done synthesizing module 'add4adder' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv:19]
-INFO: [Synth 8-6157] synthesizing module 'mux6sel' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'mux6sel' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'program_counter' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv:19]
-INFO: [Synth 8-6155] done synthesizing module 'program_counter' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv:19]
-INFO: [Synth 8-6157] synthesizing module 'Memory' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv:48]
-INFO: [Synth 8-3876] $readmem data file 'Test_All.mem' is read successfully [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv:73]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv:95]
-INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv:48]
-INFO: [Synth 8-6157] synthesizing module 'REG_FILE' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv:32]
-INFO: [Synth 8-6155] done synthesizing module 'REG_FILE' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv:32]
-INFO: [Synth 8-6157] synthesizing module 'IMMED_GEN' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv:18]
-INFO: [Synth 8-6155] done synthesizing module 'IMMED_GEN' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv:18]
-INFO: [Synth 8-6157] synthesizing module 'BRANCH_ADDR_GEN' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'BRANCH_ADDR_GEN' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'BRANCH_COND_GEN' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'BRANCH_COND_GEN' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv:31]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv:31]
-INFO: [Synth 8-6157] synthesizing module 'CU_DCDR' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_DCDR.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'CU_DCDR' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_DCDR.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'CU_FSM' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_FSM.sv:18]
-INFO: [Synth 8-6155] done synthesizing module 'CU_FSM' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_FSM.sv:18]
-INFO: [Synth 8-6155] done synthesizing module 'Otter_MCU' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'SevSegDisp' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/SevSegDisp.sv:21]
-INFO: [Synth 8-6157] synthesizing module 'BCD' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/BCD.sv:18]
-INFO: [Synth 8-6155] done synthesizing module 'BCD' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/BCD.sv:18]
-INFO: [Synth 8-6157] synthesizing module 'CathodeDriver' [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:22]
-INFO: [Synth 8-226] default block is never used [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:46]
-INFO: [Synth 8-226] default block is never used [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:49]
-INFO: [Synth 8-226] default block is never used [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:71]
-INFO: [Synth 8-226] default block is never used [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:93]
-INFO: [Synth 8-226] default block is never used [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:115]
-INFO: [Synth 8-6155] done synthesizing module 'CathodeDriver' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:22]
-INFO: [Synth 8-6155] done synthesizing module 'SevSegDisp' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/SevSegDisp.sv:21]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/Downloads/OTTER_Wrapper_v1_02.sv:78]
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_Wrapper' (0#1) [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/Downloads/OTTER_Wrapper_v1_02.sv:17]
-WARNING: [Synth 8-3848] Net csr_RD in module/entity Otter_MCU does not have driver. [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv:34]
-WARNING: [Synth 8-3848] Net mtvec in module/entity Otter_MCU does not have driver. [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv:34]
-WARNING: [Synth 8-3848] Net mepc in module/entity Otter_MCU does not have driver. [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/Downloads/OTTER_Wrapper_v1_02.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'Otter_MCU' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'add4adder' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'add4adder' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'mux6sel' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'mux6sel' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'program_counter' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'program_counter' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv:48]
+INFO: [Synth 8-3876] $readmem data file 'Test_All.mem' is read successfully [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv:73]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv:95]
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv:48]
+INFO: [Synth 8-6157] synthesizing module 'REG_FILE' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'REG_FILE' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv:32]
+INFO: [Synth 8-6157] synthesizing module 'IMMED_GEN' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'IMMED_GEN' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'BRANCH_ADDR_GEN' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'BRANCH_ADDR_GEN' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'BRANCH_COND_GEN' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'BRANCH_COND_GEN' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'CU_DCDR' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_DCDR.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'CU_DCDR' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_DCDR.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'CU_FSM' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_FSM.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'CU_FSM' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_FSM.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'Otter_MCU' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'SevSegDisp' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/SevSegDisp.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'BCD' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/BCD.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'BCD' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/BCD.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'CathodeDriver' [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:22]
+INFO: [Synth 8-226] default block is never used [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:46]
+INFO: [Synth 8-226] default block is never used [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:49]
+INFO: [Synth 8-226] default block is never used [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:71]
+INFO: [Synth 8-226] default block is never used [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:93]
+INFO: [Synth 8-226] default block is never used [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:115]
+INFO: [Synth 8-6155] done synthesizing module 'CathodeDriver' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'SevSegDisp' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/SevSegDisp.sv:21]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/Downloads/OTTER_Wrapper_v1_02.sv:78]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_Wrapper' (0#1) [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/Downloads/OTTER_Wrapper_v1_02.sv:17]
+WARNING: [Synth 8-3848] Net csr_RD in module/entity Otter_MCU does not have driver. [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv:34]
+WARNING: [Synth 8-3848] Net mtvec in module/entity Otter_MCU does not have driver. [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv:34]
+WARNING: [Synth 8-3848] Net mepc in module/entity Otter_MCU does not have driver. [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv:34]
 WARNING: [Synth 8-7129] Port CS_INTR in module CU_FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SIZE_SIGN[14] in module CU_FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SIZE_SIGN[13] in module CU_FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SIZE_SIGN[12] in module CU_FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port int_taken in module CU_DCDR is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 13915 ; free virtual = 21332
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1279.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 13914 ; free virtual = 21330
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1279.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 13914 ; free virtual = 21330
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1279.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2596.559 ; gain = 0.000 ; free physical = 13928 ; free virtual = 21344
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1279.336 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/constrs_1/new/constraints.xdc]
-Finished Parsing XDC File [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/constrs_1/new/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/OTTER_Wrapper_propImpl.xdc].
+Parsing XDC File [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/OTTER_Wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/OTTER_Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2660.590 ; gain = 0.000 ; free physical = 13761 ; free virtual = 21179
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1311.609 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2660.590 ; gain = 0.000 ; free physical = 13761 ; free virtual = 21179
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1311.609 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13565 ; free virtual = 21273
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1311.609 ; gain = 32.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13558 ; free virtual = 21273
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1311.609 ; gain = 32.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13551 ; free virtual = 21292
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1311.609 ; gain = 32.273
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'CU_FSM'
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
@@ -148,7 +148,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'CU_FSM'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13478 ; free virtual = 21232
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1311.609 ; gain = 32.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -230,7 +230,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "CPU/otter_memory/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "CPU/otter_memory/memory_reg"
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13552 ; free virtual = 21278
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1311.609 ; gain = 32.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -260,13 +260,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13435 ; free virtual = 21161
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1311.609 ; gain = 32.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13426 ; free virtual = 21152
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1311.609 ; gain = 32.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -326,7 +326,7 @@ INFO: [Synth 8-7052] The timing for the instance CPU/otter_memory/memory_reg_bra
 INFO: [Synth 8-7052] The timing for the instance CPU/otter_memory/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance CPU/otter_memory/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13423 ; free virtual = 21148
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1323.395 ; gain = 44.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -344,37 +344,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13394 ; free virtual = 21119
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1337.191 ; gain = 57.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13389 ; free virtual = 21115
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1337.191 ; gain = 57.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13374 ; free virtual = 21100
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1337.191 ; gain = 57.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13374 ; free virtual = 21100
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1337.191 ; gain = 57.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13374 ; free virtual = 21100
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1337.277 ; gain = 57.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13372 ; free virtual = 21098
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1337.277 ; gain = 57.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -409,18 +409,18 @@ Report Cell Usage:
 |21    |OBUF     |    28|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13372 ; free virtual = 21097
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1337.277 ; gain = 57.941
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2660.590 ; gain = 0.000 ; free physical = 13418 ; free virtual = 21143
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13418 ; free virtual = 21143
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1337.277 ; gain = 25.668
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1337.277 ; gain = 57.941
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2660.590 ; gain = 0.000 ; free physical = 13469 ; free virtual = 21195
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1349.348 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 289 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2660.590 ; gain = 0.000 ; free physical = 13433 ; free virtual = 21159
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1353.105 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 14 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
@@ -430,7 +430,7 @@ Synth Design complete, checksum: 4bd057cf
 INFO: [Common 17-83] Releasing license: Synthesis
 127 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2660.590 ; gain = 64.031 ; free physical = 13515 ; free virtual = 21240
-INFO: [Common 17-1381] The checkpoint '/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1/OTTER_Wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:53 . Memory (MB): peak = 1353.105 ; gain = 73.770
+INFO: [Common 17-1381] The checkpoint 'C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1/OTTER_Wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_Wrapper_utilization_synth.rpt -pb OTTER_Wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Feb 27 00:04:21 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  1 11:07:17 2023...

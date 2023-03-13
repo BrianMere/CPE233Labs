@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1/OTTER_Wrapper.tcl"
+  variable script "C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1/OTTER_Wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,40 +70,38 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param xicom.use_bs_reader 1
-set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.cache/wt [current_project]
-set_property parent.project_path /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.cache/wt [current_project]
+set_property parent.project_path C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.cache/ip [current_project]
+set_property ip_output_repo c:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/Downloads/Test_All.mem
+read_mem C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/Downloads/Test_All.mem
 read_verilog -library xil_defaultlib -sv {
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/BCD.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_DCDR.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_FSM.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/SevSegDisp.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv
-  /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/Downloads/OTTER_Wrapper_v1_02.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/ALU.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/BCD.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_ADDR_GEN.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW5_MEM_BRANCH_GENS/HW5_MEM_BRANCH_GENS.srcs/sources_1/new/BRANCH_COND_GEN.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_DCDR.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/CU_FSM.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/CathodeDriver.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW4_ALU_and_IMMED/HW4_ALU_and_IMMED.srcs/sources_1/new/IMMED_GEN.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/new/Otter_MCU.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/SevSeg_SV/SevSegDisp.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/add4adder.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/mux6sel.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/Downloads/otter_memory_v1_07.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_PC/HW2_PC.srcs/sources_1/new/program_counter.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/sources_1/imports/CPE233Labs/HW2_REG_FILE/HW2_REG_FILE.srcs/sources_1/new/top_REG_FILE.sv
+  C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/sources_1/imports/Downloads/OTTER_Wrapper_v1_02.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -114,12 +112,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/constrs_1/new/constraints.xdc]
+read_xdc C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/constrs_1/new/constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/utils_1/imports/synth_1/Otter_MCU.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.srcs/utils_1/imports/synth_1/Otter_MCU.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

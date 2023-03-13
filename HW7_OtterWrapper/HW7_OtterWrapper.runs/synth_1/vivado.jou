@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2022.1 (64-bit)
-# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Feb 27 00:03:33 2023
-# Process ID: 117759
-# Current directory: /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1
-# Command line: vivado -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
-# Log file: /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1/OTTER_Wrapper.vds
-# Journal file: /home/brianm/Documents/Repos/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1/vivado.jou
-# Running On: brian-desktopPC, OS: Linux, CPU Frequency: 4299.999 MHz, CPU Physical cores: 6, Host memory: 33576 MB
+# Start of session at: Wed Mar  1 11:06:19 2023
+# Process ID: 19044
+# Current directory: C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1
+# Command line: vivado.exe -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
+# Log file: C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1/OTTER_Wrapper.vds
+# Journal file: C:/Users/brian/Documents/SchoolPapers/Repositories/CPE233Labs/HW7_OtterWrapper/HW7_OtterWrapper.runs/synth_1\vivado.jou
+# Running On: DESKTOP-OJK9U19, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16799 MB
 #-----------------------------------------------------------
 source OTTER_Wrapper.tcl -notrace
